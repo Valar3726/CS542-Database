@@ -1,0 +1,13 @@
+extends ../layoutCustomer
+
+block content
+    each item in cars
+        .col-md-3
+            .thumbnail
+                a(href="/customer/#{item.carid}")
+                    img.img-thumbnail.img-circle.img-responsive(src="/images/#{item.img}",alt="#{item.carid}")
+                .caption
+                    h4 Model:   #{item.model}
+                    h5 Year:    #{item.year}
+                    h5 Price:   #{item.price}
+                    p: a.btn.btn-primary(href="/customer/#{item.carid}", role="button") Detail

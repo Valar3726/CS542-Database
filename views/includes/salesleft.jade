@@ -1,0 +1,34 @@
+form(method="post",action="/sales/new")
+    button.btn.btn-primary(type="submit",) Add New Record
+
+form(method="post",action="/sales/list",)
+    button.btn.btn-primary(type="submit",style="margin-top: 20px") Modify / Remove
+
+form(method="post",action="/sales/query")
+    .form-group
+        label(for="company") Company
+        select#company.form-control(name = 'company')
+            option Company
+            optgroup(label='Japan', data-max-options='2')
+                option Toyota
+                option Honda
+                option Mazda
+            optgroup(label='US', data-max-options='2')
+                option Ford
+                option Buick
+                option Jeep
+            optgroup(label='German', data-max-options='2')
+                option BMW
+                option Audi
+                option Volkswagen
+    .form-group
+        label Year
+        input#yearmin.form-control(type="number", name="yearmin",min="1995",max="2018", placeholder='Min:1995')
+        input#yearmax.form-control(type="number", name="yearmax",min="1995",max="2018", placeholder='Max:2018')
+
+    .form-group
+        label Price
+        input#pricemin.form-control(type="number", name="pricemin", min="5000",max="500000", placeholder='Min:5000')
+        input#pricemax.form-control(type="numebr", name="pricemax", min="5000",max="500000", placeholder='Max:500000')
+
+    button.btn.btn-primary(type="submit") Search

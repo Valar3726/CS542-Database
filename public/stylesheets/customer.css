@@ -1,0 +1,15 @@
+.label_input {
+    font-size: 14px;
+    font-family: Times New Roman;
+
+    width: 65px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+
+    margin-top: 20px;
+    color: white;
+    background-color: #3CD8FF;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

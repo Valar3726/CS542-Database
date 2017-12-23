@@ -1,0 +1,27 @@
+doctype
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        link(rel='stylesheet', href='/stylesheets/signup.css')
+    body
+        div#login_frame
+            label.label_error #{title}
+            form(method='post', action="/signup/check")
+                p
+                    label.label_input UserID
+                    input#username.text_field(type='text', name='userid',required="required")
+
+                p
+                    label.label_input Name
+                    input#name.text_field(type='text', name='name',required="required")
+                p
+                    label.label_input Password
+                    input#password.text_field(type='text', name='password',required="required")
+                p
+                    label.label_input Zip
+                    input#zip.text_field(type='text', name='zip',required="required")
+
+                #login_control
+                    input#btn_signup(type='submit', value='Create account')
+

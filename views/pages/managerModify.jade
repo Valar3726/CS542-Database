@@ -1,0 +1,17 @@
+extends ../layoutManager
+block content
+    form.form-horizontal(method="post",action="/manager/modifybudget")
+        .form-group
+            label.col-sm-2.control-label SalesID
+            .col-sm-3
+                label.form-control #{sales_id}
+
+        .form-group
+            label.col-sm-2.control-label Budget
+            .col-sm-3
+                input#carid.form-control(type="text", name="BUDGET",required="required")
+
+
+        .form-group
+            .col-sm-offset-6.col-sm-2
+            button.btn.btn-primary(type="submit") Modify

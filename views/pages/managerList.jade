@@ -1,0 +1,21 @@
+extends ../layoutManager
+block content
+    table.table.table-hover.table-bordered
+        thead
+            tr
+                th EID
+                th Name
+                th SSN
+                th Budget
+                th Group
+        tbody
+            each item in sales
+                tr(class="item-id-#{item._id}")
+                    td #{item.EID}
+                    td #{item.NAME}
+                    td #{item.SSN}
+                    td #{item.BUDGET}
+                    td #{item.GROUP}
+                    td: form(method="post",action="/manager/modify/#{item.EID}")
+                            button.btn.btn-primary(type="submit",) Modify
+

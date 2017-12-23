@@ -1,0 +1,16 @@
+doctype
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        link(rel='stylesheet', href='/stylesheets/customer.css')
+
+        include ./includes/head.jade
+    body
+        include ./includes/header.jade
+        .container
+            .row
+                .col-md-2
+                    include ./includes/customerleft.jade
+                .col-md-10
+                    block content

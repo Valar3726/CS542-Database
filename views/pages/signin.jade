@@ -1,0 +1,25 @@
+doctype
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        link(rel='stylesheet', href='/stylesheets/signin.css')
+    body
+        div#login_frame
+            label.label_error #{error}
+
+            form(method='post', action="/signin/check")
+                p
+                    label.label_input UserID
+                    input#username.text_field(type='text', name='userid', required="required")
+
+                p
+                    label.label_input Password
+                    input#password.text_field(type='text', name='password', required="required")
+
+                #login_control
+                    input#btn_login(type='submit', value='login')
+
+                    a#create_account(href='signup') Not have a account&#xFF1F;
+
+

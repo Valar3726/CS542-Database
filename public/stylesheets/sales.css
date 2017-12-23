@@ -1,0 +1,151 @@
+body {
+    background-image: url("../images/background.jpg");;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#sign {
+
+    margin-left: 1100px;
+
+
+
+
+    border-radius: 10px;
+    text-align: center;
+}
+#search {
+    width: 300px;
+    height: 360px;
+    padding: 13px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -600px;
+    margin-top: -200px;
+
+    background-color: rgba(240, 255, 255, 0.5);
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+#btn_search {
+    font-size: 14px;
+    font-family: Times New Roman;
+
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    margin-left: 70px;
+    margin-top: 40px;
+
+    color: white;
+    background-color: #3BD9FF;
+    border-radius: 6px;
+    border: 0;
+
+    float: left;
+}
+.label_input {
+    font-size: 14px;
+    font-family: Times New Roman;
+
+    width: 90px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+
+    margin-top: 20px;
+    color: white;
+    background-color: #3CD8FF;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.text_field {
+    width: 178px;
+    height: 28px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 20px;
+    border: 0;
+}
+#modelname{
+    width: 178px;
+    height: 28px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 84px;
+    margin-left: 0px;
+    border: 0;
+}
+#btn_add {
+    font-size: 14px;
+    font-family: Times New Roman;
+
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    margin-left: 0px;
+    margin-bottom: 20px;
+
+    color: white;
+    background-color: #3BD9FF;
+    border-radius: 6px;
+    border: 0;
+
+
+}
+#sbt_add {
+    font-size: 14px;
+    font-family: Times New Roman;
+
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    margin-left: 0px;
+    margin-bottom: 20px;
+
+    color: white;
+    background-color:  #3BD9FF;
+    border-radius: 6px;
+    border: 0;
+
+
+}
+#display_info{
+    width: 600px;
+    height: 500px;
+    padding: 13px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -200px;
+
+    background-color: rgba(240, 255, 255, 0.5);
+
+    border-radius: 10px;
+    text-align: center;
+}
+#insert_info{
+    width: 600px;
+    height: 500px;
+    padding: 13px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -200px;
+
+    background-color: rgba(240, 255, 255, 0.5);
+
+    border-radius: 10px;
+    text-align: center;
+}

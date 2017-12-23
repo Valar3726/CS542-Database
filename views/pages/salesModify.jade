@@ -1,0 +1,93 @@
+//
+   Created by leon on 11/27/17.
+
+extends ../layoutSales
+block content
+    form#saleinputform.form-horizontal(method="post",action="/sales/update")
+        .form-group
+            label.col-sm-2.control-label(for="carid") Car Id
+            .col-sm-3
+                input#carid.form-control(type="text", name="carid",value="#{car.carid}", readonly=true,required="required")
+
+        .form-group
+            label.col-sm-2.control-label(for="price") Price
+            .col-sm-3
+                input#price.form-control(type="number", min="#{car.minimumprice}",max="500000",name="price",step="any",value="#{car.price}",required="required")
+            .col-sm-1
+                label.control-label() Dollar
+
+        .form-group
+            label.col-sm-2.control-label MinimumPrice
+            .col-sm-3
+                label#minimum.form-control #{car.minimumprice}
+            .col-sm-1
+                label.control-label() Dollar
+
+        .form-group
+            label.col-sm-2.control-label(for="mileage") Mileage
+            .col-sm-3
+                input#mileage.form-control(type="number", min="0",name="mileage",value ="#{car.mileage}",required="required")
+            .col-sm-1
+                label.control-label() miles
+
+        .form-group
+            label.col-sm-2.control-label(for="year") Year
+            .col-sm-4
+                input#year.form-control(type="range", min="1995",max="2018",value="#{car.year}",name="year",oninput="this.form.yearoutput.value=this.value",required="required")
+            .col-sm-2
+                input#yearoutput.form-control(name="yearoutput",value="#{car.year}",placeholder="2017")
+
+        .form-group
+            label.col-sm-2.control-label(for="engV") EngV
+            .col-sm-4
+                input#engV.form-control(type="range", min="0",max="10",value="#{car.engV}",name="engV",step="0.5",oninput="this.form.engvoutput.value=this.value",required="required")
+            .col-sm-2
+                input#engvoutput.form-control(name="engvoutput",value="#{car.engV}",placeholder="3.5")
+
+        .form-group
+            label.col-sm-2.control-label(for="engType") engType
+            .col-sm-4
+                select#engType.form-control(name = 'engType',value="#{car.engType}")
+                    option(value="petrol") Petrol
+                    option(value="gas") Gas
+
+        .form-group
+            label.col-sm-2.control-label(for="drive") Drive
+            .col-sm-4
+                select#drive.form-control(name = 'drive',value="#{car.drive}")
+                    option(value="front") Front
+                    option(value="full") Full
+                    option(value="rear") Rear
+
+        .form-group
+            label.col-sm-2.control-label(for="registration") Registration
+            .col-sm-4
+                select#registration.form-control(name = 'registration',value="#{car.registration}")
+                    option(value="yes") Yes
+                    option(value="no") No
+
+        .form-group
+                    label.col-sm-2.control-label(for="status") Status
+                    .col-sm-4
+                        select#status.form-control(name = 'status',value="#{car.status}")
+                            option(value="1") 1
+                            option(value="0") 0
+        .form-group
+            label.col-sm-2.control-label(for="model") Model
+            .col-sm-4
+                select#model.form-control(name = 'modelid',value="#{car.modelid}")
+                    option Model
+                    optgroup(label='Toyota', data-max-options='1')
+                        option(value="4") Camery
+                        option(value="5") Rav4
+                    optgroup(label='Honda', data-max-options='1')
+                        option(value="6") Accord
+                        option(value="7") Civic
+                        option(value="8") CR-V
+                    optgroup(label='BMW', data-max-options='1')
+                        option(value="3") i3
+                        option(value="1") i5
+                        option(value="2") i7
+        .form-group
+            .col-sm-offset-6.col-sm-8
+                button.btn.btn-primary(type="submit") Update the Record

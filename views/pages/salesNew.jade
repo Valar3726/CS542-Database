@@ -1,0 +1,86 @@
+//
+   Created by leon on 11/20/17.
+
+extends ../layoutSales
+block content
+    form#saleinputform.form-horizontal(method="post",action="/sales/newRecord")
+        .form-group
+            label.col-sm-2.control-label(for="carid") Car Id
+            .col-sm-3
+                input#carid.form-control(type="text", name="carid",required="required")
+
+        .form-group
+            label.col-sm-2.control-label(for="price") Price
+            .col-sm-3
+                input#price.form-control(type="number", min="5000",max="500000",name="price",step="any",required="required")
+            .col-sm-1
+                label.control-label() Dollar
+
+        .form-group
+            label.col-sm-2.control-label(for="mileage") Mileage
+            .col-sm-3
+                input#mileage.form-control(type="number", min="0",name="mileage",required="required")
+            .col-sm-1
+                label.control-label() miles
+
+        .form-group
+            label.col-sm-2.control-label(for="year") Year
+            .col-sm-4
+                input#year.form-control(type="range", min="1995",max="2018",value=2017,name="year",oninput="this.form.yearoutput.value=this.value")
+            .col-sm-2
+                input#yearoutput.form-control(name="yearoutput",value="2017",placeholder="2017")
+
+        .form-group
+            label.col-sm-2.control-label(for="engv") EngV
+            .col-sm-4
+                input#engv.form-control(type="range", min="0",max="10",value=3.5,name="engv",step="0.5",oninput="this.form.engvoutput.value=this.value")
+            .col-sm-2
+                input#engvoutput.form-control(name="engvoutput",value="3.5",placeholder="3.5")
+
+        .form-group
+            label.col-sm-2.control-label(for="engType") engType
+            .col-sm-4
+                select#engType.form-control(name = 'engType')
+                    option Petrol
+                    option Gas
+
+        .form-group
+            label.col-sm-2.control-label(for="drive") Drive
+            .col-sm-4
+                select#drive.form-control(name = 'drive')
+                    option Front
+                    option Full
+                    option Rear
+
+        .form-group
+            label.col-sm-2.control-label(for="registration") Registration
+            .col-sm-4
+                select#registration.form-control(name = 'registration')
+                    option Yes
+                    option No
+
+        .form-group
+                    label.col-sm-2.control-label(for="status") Status
+                    .col-sm-4
+                        select#status.form-control(name = 'status')
+                            option 1
+                            option 0
+        .form-group
+            label.col-sm-2.control-label(for="modelid") Model
+            .col-sm-4
+                select#modelid.form-control(name = 'modelid')
+                    option Model
+                    optgroup(label='Toyota', data-max-options='1')
+                        option(value="4") Camery
+                        option(value="5") Rav4
+                    optgroup(label='Honda', data-max-options='1')
+                        option(value="6") Accord
+                        option(value="7") Civic
+                        option(value="8") CR-V
+                    optgroup(label='BMW', data-max-options='1')
+                        option(value="3") i3
+                        option(value="1") i5
+                        option(value="2") i7
+        .form-group
+            .col-sm-offset-6.col-sm-8
+                button.btn.btn-primary(type="submit") Add New Record

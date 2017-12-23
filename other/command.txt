@@ -1,0 +1,14 @@
+0. sudo mysql -u root -p
+	input pawd: 25327468
+1. sudo mysql -u cs542 -p
+	input Cs!542542
+2. show databases;
+3.  use mysql;
+	select User, Host from user;
+4.	desc tableName;
+5. exit
+
+6. display current pwd, cd, ls
+    system pwd
+    system ls
+    system cd

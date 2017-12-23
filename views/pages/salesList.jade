@@ -1,0 +1,25 @@
+//Created by lzhang6 on 11/19/17.
+extends ../layoutSales
+block content
+    table.table.table-hover.table-bordered
+        thead
+            tr
+                th CarId
+                th Company
+                th Model
+                th Year
+                th Price
+                th Detail
+                th Modify
+                th Remove
+        tbody
+            each item in cars
+                tr(class="item-id-#{item._id}")
+                    td #{item.carid}
+                    td #{item.company}
+                    td #{item.model}
+                    td #{item.year}
+                    td #{item.price}
+                    td: a(target="_blank", href="/sales/detail/#{item.carid}") Detail
+                    td: a(target="_blank", href="/sales/modify/#{item.carid}") Modify
+                    td: a(target="_blank", href="/sales/remove/#{item.carid}") Remove
